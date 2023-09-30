@@ -1,0 +1,8 @@
+version: '3.4'
+services:
+  esco_crosstable_prep:
+    build: .
+    container_name: 'esco_crosstable_prep'
+    volumes:
+      - ./output:./output
+      
