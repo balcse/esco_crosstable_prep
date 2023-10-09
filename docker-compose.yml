@@ -4,5 +4,6 @@ services:
     build: .
     container_name: 'esco_crosstable_prep'
     volumes:
-      - ./output:./output
-      
+      - ./output:/usr/src/app/output
+      - ./data:/usr/src/app/data
+

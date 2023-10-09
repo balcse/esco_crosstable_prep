@@ -6,8 +6,8 @@ from pyquery import PyQuery
 from more_itertools import chunked
 import time
 
-path_eu_conv = 'data/ONET_(Occupations)_0_updated.csv'
-path_output = 'output/esco_hash_{}_{}.csv'
+path_eu_conv = '/usr/src/app/data/ONET_(Occupations)_0_updated.csv'
+path_output = '/usr/src/app/output/esco_hash_{}_{}.csv'
 
 # df_aioe = pd.read_excel(path_aioe,sheet_name=1)
 
@@ -32,7 +32,7 @@ def query(url):
 counter = 0
 batchsize = 500
 
-batches = list(chunked(urls[:15],batchsize))
+batches = list(chunked(urls,batchsize))
 
 for i in range(len(batches)):
     print('Batch {} of {}'.format(i+1,len(batches)))
